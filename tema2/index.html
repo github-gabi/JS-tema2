@@ -14,15 +14,23 @@
         {
             document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
         }
-		
-        var fructe = 'pepene, para, pruna, piersica';
-        var nrCaractere = fructe.length;
-        var nrCaractereWithoutSpace = fructe.replace(/ /g, '').length;
-        var upperCase = fructe.substring(0,6). toUpperCase();
-        var replaceString = fructe.replace(/pepene/g, 'word');
-        var lastWord = fructe.slice(-8);
-        var deletedWord = fructe.replace(/para, /i, '');
-        showMessage(fructe);
+
+        var stire = 'Cătălin Botezatu lansează o colecție de halate de spital!';
+        var nrCaractere = stire.length;
+        var nrCaractereWithoutSpace = stire.replace(/ /g, '').length;
+
+        var firstSpace = stire.indexOf(' ');
+        var firstWord = stire.indexOf(0, firstSpace);
+        var upperCase = stire.firstWord.toUpperCase();
+
+        var replaceString = stire.replace(firstWord, 'word');
+
+        var lastSpace = stire.lastIndexOf(' ');
+        var lastWord = stire.lastindexOf(0, firstSpace);
+        var lastWord = stire.slice(-8);
+
+        var deletedWord = stire.replace(/para, /i, '');
+        showMessage(stire);
         showMessage(nrCaractere);
         showMessage(nrCaractereWithoutSpace);
         showMessage(upperCase);
