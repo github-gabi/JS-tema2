@@ -20,16 +20,16 @@
         var nrCaractereWithoutSpace = stire.replace(/ /g, '').length;
 
         var firstSpace = stire.indexOf(' ');
-        var firstWord = stire.indexOf(0, firstSpace);
-        var upperCase = stire.firstWord.toUpperCase();
+        var firstWord = stire.substring(0, firstSpace);
+        var upperCase = firstWord.toUpperCase();
 
         var replaceString = stire.replace(firstWord, 'word');
 
         var lastSpace = stire.lastIndexOf(' ');
-        var lastWord = stire.lastindexOf(0, firstSpace);
-        var lastWord = stire.slice(-8);
+        var lastWord = stire.substring(0, lastSpace);
 
-        var deletedWord = stire.replace(/para, /i, '');
+        var deletedWord = lastWord.replace('', lastWord);
+
         showMessage(stire);
         showMessage(nrCaractere);
         showMessage(nrCaractereWithoutSpace);
