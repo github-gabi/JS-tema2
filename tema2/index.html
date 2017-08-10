@@ -15,7 +15,7 @@
             document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
         }
 
-        var stire = 'Cătălin Botezatu lansează o colecție de halate de spital!';
+        var stire = 'Cătălin Botezatu lansează o colecție de halate de spital';
         var nrCaractere = stire.length;
         var nrCaractereWithoutSpace = stire.replace(/ /g, '').length;
 
@@ -26,9 +26,12 @@
         var replaceString = stire.replace(firstWord, 'word');
 
         var lastSpace = stire.lastIndexOf(' ');
-        var lastWord = stire.substring(nrCaractere, lastSpace);
+        var lastWord = stire.substring(lastSpace, nrCaractere);
 
-        var deletedWord = lastWord.replace('', lastWord);
+        var secondSpace = stire.indexOf(' ', firstSpace + 1);
+        var secondWord = stire.substring(firstSpace, secondSpace);
+
+        var deletedWord = stire.replace(secondWord, '');
 
         showMessage(stire);
         showMessage(nrCaractere);
