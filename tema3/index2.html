@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson3</title>
+	<style type="text/css">
+		#demo {
+			font-size: 24px;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+    <div id="demo"></div>
+	<script type="text/javascript">
+		var str = "11111010000010001";
+		var a = "1";
+		var b = "0";
+        var numara = 0;
+        function show(message)
+        {
+            document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
+        }
+
+		for (var i = 0; i < str.length; i++) {
+			
+			show(a++);
+
+		}
+
+
+	</script>
+</body>
+</html>
