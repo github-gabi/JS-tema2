@@ -14,21 +14,40 @@
 <body>
     <div id="demo"></div>
 	<script type="text/javascript">
-		var text = 'Detinuti chinezi fortati sa colecteze aur virtual';
-        var textLength = text.length;
         function show(message)
         {
             document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
         }
-show(text);
+
+		function esteVocala(caracter)
+		{
+			caracter = caracter.toLowerCase();
+
+			if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
+				return true;
+			}
+
+			return false;
+		}
+
+		var text = 'Detinuti chinezi fortati sa colecteze aur virtual!';
+		text = 'Ae. Cd bla blu.. !';
+        var textLength = text.length;
+		var nrVocale = 0;
+		var nrConsoane = 0;
+
+		show(text);
 
 		for (var i = 0; i < textLength; i++) {
-            if ((text[i] == 'a') || (text[i] == 'e') || (text[i] == 'i') || (text[i] == 'o') || (text[i] == 'u')) {
-               show(textLength);
-            } else {
-
+            if (esteVocala(text[i].toLowerCase())) {
+				nrVocale++;
+            } else if (text[i] != ' ' && text[i] != '.' && text[i] != '!') {
+				nrConsoane++;
             }
 		}
+
+		show('Numar vocale: ' + nrVocale);
+		show('Numar consoane: ' + nrConsoane);
 
 	</script>
 </body>
