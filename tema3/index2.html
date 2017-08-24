@@ -14,20 +14,27 @@
 <body>
     <div id="demo"></div>
 	<script type="text/javascript">
-		var str = "11111010000010001";
-		var a = "1";
-		var b = "0";
-        var numara = 0;
         function show(message)
         {
             document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
         }
 
-		for (var i = 0; i < str.length; i++) {
-			
-			show(a++);
+		var str = '111101010000010001';
+		var numara_1 = '0';
+		var numara_0 = '0';
+		
+        show(str);
 
+		for (var i = 0; i < str.length; i++) {
+			if (str[i] == '1') {
+				numara_1++;
+			} else {
+				numara_0++;
+			}
 		}
+
+		show('1 apare de ' + numara_1 + ' ori');
+		show('0 apare de ' + numara_0 + ' ori');
 
 
 	</script>
