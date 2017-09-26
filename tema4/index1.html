@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tema4</title>
+	<style type="text/css">
+		#demo {
+			font-size: 24px;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+    <!--## Problema 1
+    Scrieti un script care sa aiba 5 variabile, fiecare continand un numar intreg (pozitiv sau negativ). Afisati numarul maxim. -->
+
+
+    <div id="demo"></div>
+	<script type="text/javascript">
+        function show(message)
+        {
+            document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
+        }
+		var a = -5;
+		var b = 1523;
+		var c = 5;
+		var d = 894;
+		var e = -18;
+        var max = Math.max(a, b, c, d, e);
+
+        show (max);
+
+	</script>
+</body>
+</html>

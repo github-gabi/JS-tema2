@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tema4</title>
+	<style type="text/css">
+		#demo {
+			font-size: 24px;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+    <!--## Problema 2
+Declarati si initializati o variabila care sa contina un cuvant. Scrieti un script care sa verifice daca acel cuvant este palindrom (citit invers este la fel cu cuvantul initial)
+> 'radar' este un palindrom -->
+
+
+    <div id="demo"></div>
+	<script type="text/javascript">
+        function show(message)
+        {
+            document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
+        }
+
+        var original = "AERISIREA";
+        //var palindrom = original.substr(-original.length);
+        var palindrom = original.length - 1;
+
+		if (original == palindrom) 
+		{
+			show (original + '=' + palindrom);
+		}
+
+        
+
+	</script>
+</body>
+</html>
