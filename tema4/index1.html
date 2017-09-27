@@ -28,9 +28,28 @@
 		var c = 5;
 		var d = 894;
 		var e = -18;
-        var max = Math.max(a, b, c, d, e);
 
-        show (max);
+        //var max = Math.max(a, b, c, d, e);
+
+		// if (a > b && a > c && a > d && a > e) {
+		// 	show('maximul: ' + a);
+		// }
+
+		var max = a;
+		if (max < b) {
+			max = b;
+		}
+		if (max < c) {
+			max = c;
+		}
+		if (max < d) {
+			max = d;
+		}
+		if (max < e) {
+			max = e;
+		}
+
+        show(max);
 
 	</script>
 </body>
