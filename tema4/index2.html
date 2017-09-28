@@ -25,13 +25,45 @@ Declarati si initializati o variabila care sa contina un cuvant. Scrieti un scri
             document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
         }
 
-        var original = "AERISIREA";
+        /* var original = 'AE.ISIREA';
 		var originalLength = original.length;
+		var isPalindrom = true;
 
-		for (i = 0; i < originalLength; i++) {
-			show(original[i] + ' --- ' + );
+		for (var i = 0; i < Math.floor(originalLength / 2); i++) {
+			show(original[i] + ' --- ' + original[originalLength - i - 1]);
+			if (original[i] != original[originalLength - i - 1]) {
+				isPalindrom = false;
+				break;
+			}
 		}
 
+		if (isPalindrom == true) {
+			show(original + ' este palindrom');
+		} else {
+			show(original + ' nu este palindrom');
+		} */
+
+		function isPalindrom(word)
+		{
+			var wordLength = word.length;
+			var halfWordLength = Math.floor(word.length / 2);
+
+			for (var i = 0; i < halfWordLength; i++) {
+				if (word[i] != word[wordLength - i - 1]) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		var word = 'radar';
+
+		if (isPalindrom(word)) {
+			show(word + ' este palindrom');
+		} else {
+			show(word + ' nu este palindrom');
+		}
 
 	</script>
 </body>
