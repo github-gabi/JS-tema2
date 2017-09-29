@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tema4</title>
+	<style type="text/css">
+		#demo {
+			font-size: 24px;
+			padding: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+    <!--## Problema 3
+Declarati si initializati o variabila care sa contina un cuvant. Scrieti un script care sa inlocuiasca fiecare litera cu urmatoarea litera din alfabet. Fiecare litera din alfabet are un cod: `'A' -> 65`, `'B' -> 66`, etc, `'a' -> 97`, `'b' -> 98`, etc. Pentru rezolvarea problemei se vor folosi `String.fromCharCode(number)` si `character.charCodeAt(0)`.
+<br>
+> `String.fromCharCode(65)` returneaza **'A'**<br>
+> `'b'.charCodeAt(0)` returneaza **98**<br>
+> Pentru stringul `'abcd'` scriptul trebuie sa afiseze `'bcde'` -->
+
+
+    <div id="demo"></div>
+	<script type="text/javascript">
+        function show(message)
+        {
+            document.getElementById('demo').innerHTML = document.getElementById('demo').innerHTML + '<br>' + message;
+        }
+
+        var text = 'abcd';
+		var textLength = text.length;
+		// var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        var asciiCode;
+        var nextChar;
+        var newText = '';
+
+		for (var i = 0; i < textLength; i++) {
+            asciiCode = text[i].charCodeAt(0);
+            nextChar = String.fromCharCode(asciiCode + 1);
+			show(text[i] + ' --- ' + asciiCode + ' --- ' + nextChar);
+            newText += nextChar;
+		}
+
+        show('New text: ' + newText);
+	</script>
+</body>
+</html>
