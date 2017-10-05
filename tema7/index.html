@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tema 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- ## Problema 1
+
+Declarati si initializati o variabila care sa contina urmatorul text:
+<br>Scrieti un script care sa numere **cate cuvinte**, **cate propozitii** si cate **cuvinte care incep cu litera mare** contine textul. -->
+
+    <div id="container"></div>
+    <script>
+        function show(message)
+        {
+            $('#container').append('<br>' + message);
+        }
+        function getnrDeSpatii(text)
+        {
+            var textFaraSpatii = text.replace((/[!?.",;... ]/g)g, '');
+
+            return text.length - textFaraSpatii.length
+        }
+
+        var text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit! Pellentesque condimentum massa vitae Tempor rutrum. Etiam porttitor blandit nibh et porta... "Aenean suscipit ut diam vel dapibus?" Integer eu erat a lorem vehicula vestibulum!? Nunc ullamcorper arcu sit amet libero faucibus, id Consectetur velit tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Mauris purus leo, interdum a suscipit et, ultrices sit amet felis.';
+
+        text = text.trim();
+
+        var noOfSpaces = getnrDeSpatii(text);
+
+        var prevSpacePos = 0;
+        var nextSpacePos = 0;
+        var word;
+        var nrword = 0;
+
+        for (var i = 0; i < noOfSpaces; i++) {
+            nextSpacePos = text.indexOf(' ', prevSpacePos + 1);
+            word = text.substring(prevSpacePos, nextSpacePos);
+            nrword ++; 
+        }
+
+    </script>
+</body>
+</html>
