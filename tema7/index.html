@@ -17,29 +17,36 @@ Declarati si initializati o variabila care sa contina urmatorul text:
         {
             $('#container').append('<br>' + message);
         }
-        function getnrDeSpatii(text)
+        function getNrDeSpatii(text)
         {
-            var textFaraSpatii = text.replace((/[!?.",;... ]/g)g, '');
+            var textFaraSpatii = text.replace(/ /g, '');
 
-            return text.length - textFaraSpatii.length
+            return text.length - textFaraSpatii.length;
         }
 
         var text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit! Pellentesque condimentum massa vitae Tempor rutrum. Etiam porttitor blandit nibh et porta... "Aenean suscipit ut diam vel dapibus?" Integer eu erat a lorem vehicula vestibulum!? Nunc ullamcorper arcu sit amet libero faucibus, id Consectetur velit tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Mauris purus leo, interdum a suscipit et, ultrices sit amet felis.';
 
         text = text.trim();
 
-        var noOfSpaces = getnrDeSpatii(text);
+        var noOfSpaces = getNrDeSpatii(text);
+        show('Nr de cuvinte: ' + (noOfSpaces + 1));
 
-        var prevSpacePos = 0;
-        var nextSpacePos = 0;
-        var word;
-        var nrword = 0;
+        var nrPropozitii = 0;
+        var nrLitereMari = 0;
+        for (var i = 0; i < text.length; i++) {
+            if (text[i] == '.' || text[i] == '!' || text[i] == '?' || text[i] == ';') {
+                if (text[i + 1] == ' ' || text[i + 1] == '"' || text[i + 1] == undefined) {
+                    nrPropozitii++;
+                }
+            }
 
-        for (var i = 0; i < noOfSpaces; i++) {
-            nextSpacePos = text.indexOf(' ', prevSpacePos + 1);
-            word = text.substring(prevSpacePos, nextSpacePos);
-            nrword ++; 
+            if (text[i] == text[i].toUpperCase() && text[i] != text[i].toLowerCase()) {
+                nrLitereMari++;
+            }
+
         }
+        show('Nr. propozitii: ' + nrPropozitii);
+        show('Nr. cuvinte litere mari: ' + nrLitereMari);
 
     </script>
 </body>
