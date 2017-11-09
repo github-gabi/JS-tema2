@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 2</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>Problema 2</p>
+                <p>Scrieti o functie care primeste ca parametru un array format doar din numere intregi si care returneaza suma patratelor acestor numere</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var args = [14562387];
+    function sumOfPows(args) {
+            var sum = 0;
+            var argsLength = args.length;
+
+            for (var i = 0; i < argsLength; i++) {
+                sum += sum + parseInt(args[i]**2);
+            }
+            return sum;
+        }
+    console.log(sumOfPows(args));
+
+
+    </script>
+
+
+
+</body>
+</html>
