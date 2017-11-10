@@ -16,28 +16,23 @@
         </div>
     </div>
     <script>
-        
-    var args = [14562387];
 
-    function sumOfPows(args) {
-            var sum = 0;
-            var argsLength = args.length;
+        var args = [1,4,5,6,2,3,8,7];
 
-            for (var i = 0; i < argsLength; i++) {
-                sum += sum + parseInt(args[i]**2);
+        function sumOfPows(args) {
+                var sum = 0;
+                var argsLength = args.length;
+
+                for (var i = 0; i < argsLength; i++) {
+                    sum += sum + parseInt(args[i]**2);
+                }
+                return sum;
             }
-            return sum;
-        }
 
-    console.log(sumOfPows(args));
-
-
-
-
+        console.log(args);
+        console.log(sumOfPows(args));
 
     </script>
-
-
 
 </body>
 </html>

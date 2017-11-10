@@ -17,19 +17,24 @@
         </div>
     </div>
     <script>
-        
-    var text = 'oamenii normali invata din propriile greseli oamenii destepti invata din greselile altora';
 
-    var words = text.split('');
-    console.log(words);
-        //var convNrs = numbers.map(number => parseInt(number));
+        var text = 'oamenii normali invata din propriile greseli oamenii destepti invata din greselile altora';
 
+        function wordsCase(text) {
+            var words = text.toLowerCase().split(' ');
+            var wordsLength = words.length;
 
+            for (var i = 0; i < wordsLength; i++) {
+                words[i] = words[i].split('');
+                words[i][0] =  words[i][0].toUpperCase();
+                words[i] = words[i].join('');
+            }
+            return words.join(' ');
+        }
 
-
+        console.log(wordsCase(text));
 
     </script>
-
 
 
 </body>
