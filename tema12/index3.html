@@ -21,15 +21,15 @@
         var text = 'oamenii normali invata din propriile greseli oamenii destepti invata din greselile altora';
 
         function wordsCase(text) {
-            var words = text.toLowerCase().split(' ');
+            var words = text.toLowerCase().split(' '); // textul e transformat in array => oamenii,normali,invata,din,propriile,greseli,oamenii,destepti,invata,din,greselile,altora
             var wordsLength = words.length;
 
             for (var i = 0; i < wordsLength; i++) {
-                words[i] = words[i].split('');
-                words[i][0] =  words[i][0].toUpperCase();
-                words[i] = words[i].join('');
+                words[i] = words[i].split(''); // fiecare cuv e splituit in caractere
+                words[i][0] =  words[i][0].toUpperCase(); // primul caracter al cuv se face cu lit. mare
+                words[i] = words[i].join(''); // uneste caracterele in cuv
             }
-            return words.join(' ');
+            return words.join(' '); // lasa spatiu intre cuv
         }
 
         console.log(wordsCase(text));
