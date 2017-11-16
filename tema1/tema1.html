@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        * {
+            font-size: 18px;
+        }
+        b {
+            color: #ff5e00;
+        }
+    </style>
 </head>
 <body>
 </body>
@@ -17,22 +25,39 @@
 
 
     var message = 'Curiozitatea \'copiilor\' este fără limite si este interesanta';
-    
+
 
     show(message + '<br>');
 
-    show(message.length + '<br>');
+    show('<b>' + 'length = ' + '</b>' + message.length + '<br>'); // length
 
-    show(message.indexOf('este') + '<br>');
+    show(message.indexOf('este') + '<br>'); // indexOf
+    show(message.indexOf('este', 30) + '<br>');
 
-    show(message.lastIndexOf('este') + '<br>');
+    show(message.lastIndexOf('este') + '<br>'); // lastIndexOf
 
-    show(message.search(/este/g) + '<br>');
+    show(message.search(/este/g) + '<br>'); // search -  nu admite al 2lea param
 
-    show(message.slice(0, 12) + '<br>');
-    show(message.slice(-20) + '<br>');
+    show(message.slice(0, 12) + '<br>'); // slice
+    show(message.slice(-20) + '<br>'); // val "-" nu merg in < IE 8
     show(message.slice(-48, -1) + '<br>');
 
+    show(message.substring(0, 18) + '<br>'); // substring - nu accepta val "-"
+    show(message.substring(12) + '<br>'); // de la 12 la sfarsit
+
+    show(message.substr(29, 11) + '<br>'); // substr - scoate de la pozitia data pe lungime
+    show(message.substr(-31) + '<br>'); // poate lua prima val negativa
+
+    show(message.replace('este', 'va fi') + '<br>'); // replace
+    show(message.replace(/este/g, 'va fi') + '<br>'); // replace - cu global
+    show(message.replace(/curiozitatea/i, 'Veselia') + '<br>'); // replace - case senzitive
+    show(message.replace(/'/g, '"') + '<br>');
+
+    show(message.toUpperCase() + '<br>'); // toUpperCase
+
+    show(message.toLowerCase() + '<br>'); // toLowerCase
+
+    show('Veselia si '.concat(message.toLowerCase()) + '<br>'); // concat
 
 
 </script>
