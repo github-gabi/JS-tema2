@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<div id="container"></div>
+
+<script>
+
+    function show(message) {
+        document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+    }
+
+
+    var message = 'Curiozitatea \'copiilor\' este fără limite si este interesanta';
+    
+
+    show(message + '<br>');
+
+    show(message.length + '<br>');
+
+    show(message.indexOf('este') + '<br>');
+
+    show(message.lastIndexOf('este') + '<br>');
+
+    show(message.search(/este/g) + '<br>');
+
+    show(message.slice(0, 12) + '<br>');
+    show(message.slice(-20) + '<br>');
+    show(message.slice(-48, -1) + '<br>');
+
+
+
+</script>
