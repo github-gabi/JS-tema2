@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 3</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>Problema 1</p>
+                <p>Scrieti un script care parcurge un array format doar din numere intregi pozitive si care inlocuieste fiecare element par cu dublul lui si fiecare element impar cu patratul lui. ```javascript var numbers = [8, 5, 6, 7]; // Array-ul numbers dupa
+                modificare devine [16, 25, 12, 49]</p>
+                <div id="container"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var numbers = [8, 5, 6, 7];
+
+        function replaceEvenOdd(numbers) {
+            
+            var numbersLength = numbers.length;
+
+            for (var i = 0; i < numbersLength; i++) {
+               if (numbers[i] % 2 == 0) {
+                   numbers[i] = parseInt(numbers[i] * 2);
+               } else {
+                   numbers[i] = parseInt(numbers[i] ** 2);
+               }
+
+            }
+            return numbers;
+        }
+
+        console.log(replaceEvenOdd(numbers));
+
+    </script>
+
+
+</body>
+</html>
