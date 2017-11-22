@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Problema 2</title>
+    <title>Problema 13.3</title>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <p>Problema 2</p>
-                <p>Declarati si initializati o variabila care sa contina un array format doar din string-uri. Scrieti un script care parcurge
-                array-ul si inlocuieste fiecare element cu numarul de caractere al acelui element. ```javascript var elements = ['red', 'green',
-                'orange', 'blue'];
-                <br>// Array-ul elements dupa modificare devine [3, 5, 6, 4]</p>
+                <p>Problema 13.3</p>
+                <p>Scrieti un script care sa stearga toate dublurile dintr-un array. In cazul elementelor de tip string compararea se va face
+                case insensitive.
+                <br>> Tips: > - parcurgeti array-ul si convertiti in lower case toate cuvintele > - sortati array-ul crescator
+                <br>  - parcurgeti array-ul si verificati daca elementul curent este la fel cu elementul urmator
+                <br>> - stergeti elementul urmator
+                si decrementati cu o unitate variabila in care ati pus la inceput lungimea array-ului pentru a scurta numarul de iteratii
+                facute de `for`-ul care parcurge array-ul
+                <br>> > Incercati si varianta in care nu sortati elementele crescator :-)</p>
                 <div id="container"></div>
             </div>
         </div>
@@ -22,7 +26,9 @@
 
     <script>
 
-
+function show(messages) {
+    $('#container').html($('#container').html() + '<br>' + messages);
+}
 
 
 
