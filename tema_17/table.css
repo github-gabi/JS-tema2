@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 90%;
+    margin: 20px auto;
+    border: 2px solid #c98301;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #a3a2a1;
+    border-right: 1px solid #a3a2a1;
+    /*border: 1px solid #a3a2a1;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large {
+    grid-column: span 2;
+    background: #f0e0d0;
+}
