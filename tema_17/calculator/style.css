@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    position: relative;
+}
+
+main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 30px;
+    width: 60%;
+    height: 500px;
+    background: #1a1a1a;
+    text-align: center;
+
+}
+
+.buttons {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px 20px;
+    height: 360px;
+
+}
+
+.button {
+background: #5a5a5a;
+font-family: 'Roboto Mono';
+font-size: 24px;
+color: #ffffff;
+cursor: pointer;
+display: grid;
+align-items: center;
+justify-content: center;
+}
