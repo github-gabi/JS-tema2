@@ -15,7 +15,7 @@ main {
     margin: 0 auto;
     padding: 30px;
     width: 60%;
-    height: 500px;
+    height: 250px;
     background: #1a1a1a;
     text-align: center;
 
@@ -25,19 +25,29 @@ main {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2px 20px;
-    height: 360px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3px;
+    height: 200px;
 
 }
 
 .button {
 background: #5a5a5a;
 font-family: 'Roboto Mono';
-font-size: 24px;
+font-size: 20px;
 color: #ffffff;
 cursor: pointer;
 display: grid;
 align-items: center;
 justify-content: center;
+}
+
+.column-1 {
+    margin-right: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.large {
+    grid-column: span 2;
 }
