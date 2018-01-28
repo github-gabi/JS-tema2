@@ -15,10 +15,33 @@ main {
     margin: 0 auto;
     padding: 30px;
     width: 60%;
-    height: 250px;
+    height: auto;
     background: #1a1a1a;
     text-align: center;
 
+}
+
+.display {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto 10px;
+    padding-bottom: 10px;
+    background: #3a3a3a;
+    border-top: 1px solid #009e08;
+    position: relative;
+}
+
+.display .input {
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+    vertical-align: bottom;
+    color: #ffffff;
+    padding-right: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .buttons {
@@ -50,4 +73,8 @@ justify-content: center;
 
 .large {
     grid-column: span 2;
+}
+
+.green {
+    background: #009e08;
 }
