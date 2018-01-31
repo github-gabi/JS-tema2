@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    margin: 50px 100px;
+}
+
+main {
+    width: 90%;
+    height: 600px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns:  50% 50%;
+}
+
+.keysLetters {
+    display: grid;
+    grid-template-columns : repeat(8, 1fr);
+    align-items: center;
+    justify-content: center;
+    background: rgb(97, 97, 97);
+    color: #ffffff;
+
+}
+
+.keysNumbers {
+    display: grid;
+    grid-template-columns : repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    background: rgb(177, 177, 177);
+    color: #ffffff;
+
+}
