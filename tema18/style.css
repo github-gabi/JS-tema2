@@ -17,27 +17,22 @@ main {
     grid-template-columns:  80% 20%;
 }
 
-#keysLetters {
-    
+#keysLetters {   
     display: grid;
-    grid-template-columns : repeat(8, 1fr);
-    
-    background: rgb(97, 97, 97);
-    
+    grid-template-columns : repeat(8, 1fr);   
+    background: rgb(97, 97, 97);   
 }
+
 .keys {
     margin: 0px auto;
     width: 99%;
-
     padding: 10px;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
     color: #ffffff;
     border-bottom: 1px solid rgb(129, 129, 129);
     border-right: 1px solid rgb(129, 129, 129);
-
 }
 
 #keysNumbers {
@@ -47,5 +42,13 @@ main {
     justify-content: center;
     background: rgb(177, 177, 177);
     color: #ffffff;
+}
 
+.space {
+    grid-column: span 6;
+}
+
+.backspace {
+    grid-column: span 2;
+    
 }
