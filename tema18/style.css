@@ -11,23 +11,36 @@ body {
 
 main {
     width: 90%;
-    height: 600px;
+    height: auto;
     margin: 100px auto;
     display: grid;
-    grid-template-columns:  50% 50%;
+    grid-template-columns:  80% 20%;
 }
 
-.keysLetters {
+#keysLetters {
+    
     display: grid;
     grid-template-columns : repeat(8, 1fr);
+    
+    background: rgb(97, 97, 97);
+    
+}
+.keys {
+    margin: 0px auto;
+    width: 99%;
+
+    padding: 10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    background: rgb(97, 97, 97);
+    
     color: #ffffff;
+    border-bottom: 1px solid rgb(129, 129, 129);
+    border-right: 1px solid rgb(129, 129, 129);
 
 }
 
-.keysNumbers {
+#keysNumbers {
     display: grid;
     grid-template-columns : repeat(4, 1fr);
     align-items: center;
