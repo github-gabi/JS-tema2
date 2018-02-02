@@ -33,6 +33,7 @@ main {
     color: #ffffff;
     border-bottom: 1px solid rgb(129, 129, 129);
     border-right: 1px solid rgb(129, 129, 129);
+    cursor: pointer;
 }
 
 #keysNumbers {
@@ -49,6 +50,14 @@ main {
 }
 
 .backspace {
+    grid-column: span 2;    
+}
+
+#display {
     grid-column: span 2;
-    
+    background: #ffffff;
+    height: 40px;
+    padding: 10px;
+    color: #222;
+    font-size: 20px;
 }

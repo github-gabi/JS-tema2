@@ -1,3 +1,8 @@
+$(function() {
+    createButtonEvents();
+});
+
+
 
 for (let i = 65; i < 97; i++) {
     var letters = String.fromCharCode(i);
@@ -11,14 +16,21 @@ for (let j = 0; j < 10; j++) {
 $('#keysLetters').append('<div class="keys space">' + 'space' + '</div>');
 $('#keysLetters').append('<div class="keys backspace">' + '&#8678;' + '</div>');
 
-$(function() {
-    createButtonEvents();
-})
 
 function createButtonEvents() {
     $('.keys').map((index, item) => {
         $(item).click(function() {
-            grab($(this));
+            grabChar($(this));
         });
-    )};
+    });
+}
+
+function grabChar(sender) {
+    let buttonText = sender.text();
+    appendToDisplay(buttonText);
+    return;
+}
+
+function appendToDisplay(char) {
+    $('#display').append(char);
 }
