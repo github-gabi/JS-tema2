@@ -14,7 +14,7 @@ for (let j = 0; j < 10; j++) {
 }
 
 $('#keysLetters').append('<div class="keys space">' + 'space' + '</div>');
-$('#keysLetters').append('<div class="keys backspace">' + '&#8678;' + '</div>');
+$('#keysLetters').append('<div class="keys backspace">' + '<' + '</div>');
 
 
 function createButtonEvents() {
@@ -27,10 +27,25 @@ function createButtonEvents() {
 
 function grabChar(sender) {
     let buttonText = sender.text();
+
     appendToDisplay(buttonText);
     return;
+
+    if (buttonText == '<') {
+        removeLastCharFromDisplay();
+        return;
+    }
+    
 }
+
+
 
 function appendToDisplay(char) {
     $('#display').append(char);
+}
+
+function removeLastCharFromDisplay() {
+    let displayText = $('#display').text();
+    let newText = displayText.substring(0, displayText.length - 1);
+    $('#display').text(newText);
 }

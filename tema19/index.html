@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tastatura</title>
-    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-    <main>
-        <div id="display"></div>
-        <div id="keysLetters"></div>
-        <div id="keysNumbers"></div>
-    </main>
+    <input class="input-field" type="text" name="" value="">
+    <br>
+    <button class="button" type="button" onclick='afiseazaMesaj("primul meu buton")'>click me!</button>
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="scripts.js"></script>
+
+    <script>
+        
+        function afiseazaMesaj(text) {
+            $('.input-field').val(text);
+        }
+
+    </script>
 </body>
 </html>
