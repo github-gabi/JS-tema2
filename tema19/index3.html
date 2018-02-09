@@ -13,28 +13,28 @@
     <br>
     <button class="button" type="button">click me!</button>
 
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
-        
+
         $(function() {
-            addButtonEvent();   
+            addButtonEvent();
         });
 
         function addButtonEvent() {
             $('.button').click(function() {
-            afiseazaMesaj();
+            afiseazaMesaj($(this));
             });
         }
 
-        function afiseazaMesaj() {
-            let textButton = $(this).text();
+        function afiseazaMesaj(sender) {
+            let textButton = sender.text();
             let input = $('.input-field');
-            input.val(input.val() + textButton);
-            return false;
+            input.val(textButton);
+            return;
         }
-        
+
 
     </script>
 </body>
