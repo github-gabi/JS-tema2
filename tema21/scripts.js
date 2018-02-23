@@ -36,20 +36,21 @@ const toggleElement = element => {
     element.toggleClass('fa-chevron-down fa-chevron-up');
 };
 
-/* function setExpand() {
-    $('.expand').click(function() {
-        $('.description:not(opened)').addClass('opened');      
-    });
-}  */
-
 function setExpand() {
-    $('.expand').click(function () {
-        if (description.hasClass('opened')) {
-            description.removeClass('opened');
-        }
-        description.addClass('opened');
+     //const description = $(this).next('.description');
+    $('.expand').click(function() {       
+         $('.description:not(.opened)').addClass('opened');
     });
-}
+}   
+
+/* function setExpand() {
+    $('.expand').click(function () {
+        //const description = $(this).next('.description');
+        if (!$('.description').hasClass('opened')) {
+            $('.description').addClass('opened');
+        }      
+    });
+} */
 
 function setCollaps() {
     $('.collaps').click(function() {
