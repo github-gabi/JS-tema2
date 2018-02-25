@@ -37,16 +37,16 @@ const toggleElement = element => {
 };
 
 function setExpand() {
-     //const description = $(this).next('.description');
-    $('.expand').click(function() {       
-         $('.description:not(.opened)').addClass('opened');
+    $('.expand').click(function() {   
+        $('.description').toggle();
+        $('.description:not(.opened)').addClass('opened');
     });
 }   
 
 /* function setExpand() {
     $('.expand').click(function () {
-        //const description = $(this).next('.description');
         if (!$('.description').hasClass('opened')) {
+            $('.description').toggle();
             $('.description').addClass('opened');
         }      
     });
@@ -54,6 +54,7 @@ function setExpand() {
 
 function setCollaps() {
     $('.collaps').click(function() {
+        $('.description').toggle();
         $('.description').removeClass('opened');
         
     });
