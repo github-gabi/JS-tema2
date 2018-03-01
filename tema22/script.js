@@ -1,4 +1,4 @@
-let displayWidth = 500;
+let displayWidth = 450;
 let displayHeight = 400;
 
 

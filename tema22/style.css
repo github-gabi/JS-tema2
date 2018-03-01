@@ -15,7 +15,7 @@ body {
     border: 2px solid #fcf802;
     background : #ccc;
     display: grid;
-    grid-template-columns: 500px 100px;
+    grid-template-columns: 450px 150px;
     overflow: hidden;
 }
 
