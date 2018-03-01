@@ -20,16 +20,18 @@ body {
 }
 
 .display {
+    position: relative;
     overflow: hidden;
 }
 
 .display i {
+    position: absolute;
     font-size : 8vw;
 }
 
 .buttons {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);  
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .button {

@@ -1,16 +1,22 @@
 let displayWidth = 500;
-let displayWheight = 400;
+let displayHeight = 400;
 
 
 const getRandomNumber = (min, max) => {
     return Math.floor(min + Math.random() * (max - min));
 };
 
-const randomPosition = (randomTop, randomLeft) => {
-    let randomTop = getRandomNumber(0, `${displayWheight}`);
-    let randomTop = getRandomNumber(0, 500);
+const randomPosition = () => {
+    let smileyWidth = $('i').width();
+    let smileyHeight = $('i').height();
 
-    $('.changePozition').click(function () {
-        $('.display i').css({ top: randomTop + 'px', left: randomLeft + 'px' });
+    let randomTop = getRandomNumber(0, displayHeight - smileyHeight);
+    let randomLeft = getRandomNumber(0, displayWidth - smileyWidth);
+
+    $('.display i').css({
+        top: randomTop + 'px',
+        left: randomLeft + 'px'
     });
-}
+};
+
+$('.changePosition').click(randomPosition);
