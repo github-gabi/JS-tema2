@@ -26,13 +26,13 @@ const randomColor = () => {
     let colorGreen = getRandomNumber(0, 255);
     let colorBlue = getRandomNumber(0, 255);
 
-    $('.display i').css("color", "rgb(" + colorRed + "," + colorGreen + "," + colorBlue + ")");
+    $('.display i').css("color", `rgb(${colorRed}, ${colorGreen}, ${colorBlue}`);
 };
 
 $('.changeColor').click(randomColor);
 
 const randomSize = () => {
-    let fontSizechanged = getRandomNumber(10, 50);
+    let fontSizechanged = getRandomNumber(10, 20);
 
     $('.display i').css('font-size', fontSizechanged + 'vw');
 };
