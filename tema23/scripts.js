@@ -1,5 +1,5 @@
-let displayWidth = 540;
-let displayHeight = 275;
+let displayWidth = $('.displayNumbers').width();
+let displayHeight = $('.displayNumbers').height();
 
 
 const getRandomNumber = (min, max) => {
@@ -7,7 +7,7 @@ const getRandomNumber = (min, max) => {
 };
 
 const displayRandomNumber = () => {
-    let randomNumber = getRandomNumber(1, number);
+    //let randomNumber = getRandomNumber(1, number);
     const number = $('input').val();
 
     const spreadNumbers = () => {
