@@ -1,20 +1,21 @@
-let displayWidth = $('.displayNumbers').width();
-let displayHeight = $('.displayNumbers').height();
+$(() => {
+    let displayWidth = $('.displayNumbers').width();
+    let displayHeight = $('.displayNumbers').height();
 
+    displayRandomNumber();
+});
 
+function displayRandomNumber() {
+    $('button.btn').click(displayNumbers);
+}
 const getRandomNumber = (min, max) => {
     return Math.floor(min + Math.random() * (max - min));
 };
 
-const displayRandomNumber = () => {
-    //let randomNumber = getRandomNumber(1, number);
-    const number = $('input').val();
+function displayNumbers() {
+    $('input').val();
+}
 
-    const spreadNumbers = () => {
-        randomNumber.map(element => {
-            $('.displayNumbers').append(element);
-        });
-    };
 
     let randomTop = getRandomNumber(0, displayHeight);
     let randomLeft = getRandomNumber(0, displayWidth);
@@ -27,11 +28,10 @@ const displayRandomNumber = () => {
         top: randomTop + 'px',
         left: randomLeft + 'px',
 
-        color: rgb(colorRed, colorGreen, colorBlue),
+        color: `rgb(${colorRed}, ${colorGreen}, ${colorBlue}`,
 
         fontSize: randomNumber + 'px'
     });
 
 };
 
-$('button.btn').click(displayRandomNumber);
