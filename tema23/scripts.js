@@ -1,37 +1,59 @@
-$(() => {
+/*$(() => {
+
+    $('.btn').click(function () {
+        spreadNumbers();
+    });
+
+});
+
+function spreadNumbers() {
+    $('.displayNumbers').append(parseInt($('input').val()));
+}
+
+*/
+
+ $(() => {
     let displayWidth = $('.displayNumbers').width();
     let displayHeight = $('.displayNumbers').height();
 
-    displayRandomNumber();
+    $('.btn').click(function () {
+        spreadNumbers();
+    });
 });
 
-function displayRandomNumber() {
-    $('button.btn').click(displayNumbers);
-}
+let inputNumber = parseInt($('input').val());
+
 const getRandomNumber = (min, max) => {
     return Math.floor(min + Math.random() * (max - min));
 };
 
-function displayNumbers() {
-    $('input').val();
-}
+const spreadNumbers = () => {
 
+    for (let i = 0; i <= inputNumber; i++) {
 
-    let randomTop = getRandomNumber(0, displayHeight);
-    let randomLeft = getRandomNumber(0, displayWidth);
+        $('.displayNumbers').append("<span class='numbers'>inputNumber[i]</span>" + 1)
 
-    let colorRed = getRandomNumber(0, 255);
-    let colorGreen = getRandomNumber(0, 255);
-    let colorBlue = getRandomNumber(0, 255);
+        let randomTop = getRandomNumber(0, displayHeight);
+        let randomLeft = getRandomNumber(0, displayWidth);
 
-    randomNumber.css({
-        top: randomTop + 'px',
-        left: randomLeft + 'px',
+        let colorRed = getRandomNumber(0, 255);
+        let colorGreen = getRandomNumber(0, 255);
+        let colorBlue = getRandomNumber(0, 255);
 
-        color: `rgb(${colorRed}, ${colorGreen}, ${colorBlue}`,
+        let changeFontSize = getRandomNumber(0, inputNumber);
 
-        fontSize: randomNumber + 'px'
-    });
+        inputNumber.css({
+            top: randomTop + 'px',
+            left: randomLeft + 'px',
+
+            color: `rgb(${colorRed}, ${colorGreen}, ${colorBlue}`,
+
+            fontSize: randomNumber + 'px'
+        });
+
+    }
 
 };
+
+
 
